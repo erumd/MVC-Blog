@@ -4,21 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog Post</title>
+  <title>Fund My Project!</title>
   {{!-- Bootstrap --}}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 <style>
+
   body {
-    background-color: rgb(209, 216, 226);
-  }
-  .TechBlog {
-    color:rgb(0, 110, 255)
-  }
-  #homepageBorder {
-    {
-  border-style: solid;
-  border-width: medium;
-}
+    background-color: bisque;
   }
 </style>
 
@@ -28,19 +20,18 @@
   <div class="flex-column justify-space-around">
     {{!-- <header class="display-flex justify-space-between align-center p-2"> --}}
       <nav class="navbar navbar-dark bg-dark">
-          <h2 class="TechBlog">Blog Page</h2>
-          <h1>
-            <a href="/" class="btn btn-primary btn-lg active">Homepage</a>
-          </h1>
-        
-            <!-- Conditionally render login or logout links -->
-            {{#if logged_in}}
-            <a href="/dashboard" class="btn btn-primary btn-lg active">Dashboard</a> 
-            <button id="logout" class="btn btn-primary btn-lg active">Logout</button>
-            {{else}}
-            <a href="/login" class="btn btn-primary btn-lg active">Dashboard</a> 
-            <a href="/login" class="btn btn-primary btn-lg active">Login</a>
-            {{/if}}
+      <h1>
+        <a href="/" class="btn btn-primary btn-lg active">Blog Homepage!</a>
+      </h1>
+     
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <a href="/profile" class="btn btn-primary btn-lg active">Dashboard</a> 
+        <button id="logout" class="btn btn-primary btn-lg active">Logout</button>
+        {{else}}
+        <a href="/login" class="btn btn-primary btn-lg active">Dashboard</a> 
+        <a href="/login" class="btn btn-primary btn-lg active">Login</a>
+        {{/if}}
       </nav>
     {{!-- </header> --}}
     <main class="container container-fluid mt-5">
@@ -52,19 +43,15 @@
     </footer>
   </div>
 
-      <!-- Render script for logged in users only -->
-      {{#if logged_in}}
-      <script src="./js/logout.js"></script>
-      {{/if}}
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 
 
 {{!-- BootStrap --}}
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-  {{!-- <script src="./js/login.js"></script> --}}
-  {{!-- <script src="./js/post.js"></script> --}}
-
-
 </body>
 
 </html>
